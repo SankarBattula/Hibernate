@@ -31,6 +31,7 @@ public class Employee {
 		@AttributeOverride(name="city", column=@Column(name="S_CITY"))
 	})
 	private Address address;
+
 	public int getEno() {
 		return eno;
 	}
