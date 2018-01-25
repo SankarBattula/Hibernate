@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class name="com.sankar.hibernate.entity.Account" table="ACCOUNT">
+		<id name="accno" column="ACCNO">
+			<generator class="increment"/>				
+		</id>
+		<property name="name" column="NAME"/>			
+		<property name="balance" column="BALANCE"/>	
+		<one-to-one name="plus" class="com.sankar.hibernate.entity.AccountPlus" cascade="all"/>
+	</class>	
+</hibernate-mapping>
